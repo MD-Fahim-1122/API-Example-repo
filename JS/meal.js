@@ -52,10 +52,10 @@ const loadMealDetail =idMeal =>{
     .then(data =>displayMealsDetail(data.meals[0]))
 }
 const displayMealsDetail = meal =>{
-document.getElementById('meal-detailsLabel').innerText = meal.strMeal
-const mealsDetail = document.getElementById('mealDetailsBody');
-mealsDetail.innerHTML = `
-    <img src="${meal.strMealThumb}">
-`
+    document.getElementById('meal-detailsLabel').innerText = meal.strMeal
+    const mealsDetails = document.getElementById('mealsDetailsBody');
+    mealsDetails.innerHTML = `
+        <img class="img-fluid" src="${meal.strMealThumb}">
+    `
 }
 loadMeals('rice');
